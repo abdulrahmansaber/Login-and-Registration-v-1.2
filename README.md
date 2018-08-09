@@ -16,3 +16,12 @@ Login and Registration Script Version 2
 # Easy to Use 
 All You Want download files then upload the database file then make your connection 
 <code>database_password, database_username</code>
+
+# What i used 
+- HTML5
+- CSS3
+- JQuery
+- PHP
+- Sample framework by me '/import/', 'autoload.php'
+- MySQL
+- Ajax
