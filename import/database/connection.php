@@ -1,0 +1,25 @@
+<?php
+
+  # Create object of Configuration Class
+  $config = new Configuration();
+
+  # Get Connection Default Options
+  $options = $config->default_connection_options();
+  
+  global $conn;
+
+  # Try to Connect
+  try {
+    # Your Connection options goes here || >>> ## root -> username | 4200 -> password
+    $config->config('root', '', $options);
+
+
+    $conn = new PDO( // Create connection
+      $config->dsn,
+      $config->username,
+      $config->password,
+      $config->options
+    );
+  } catch (PDOException $e) { # Refused to connection
+    echo $e->getMessage();
+  }

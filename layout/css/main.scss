@@ -1,0 +1,196 @@
+/* main.scss
+ * Main Style file
+ * it contains designs of registertion and login forms
+ */
+@import '_mixins', '_variables';
+// ------------------------------------- \\
+
+/* Body Resets */
+body {
+  background-color: #EEE;
+}
+
+// ------------------------------------- \\
+
+/* Login Form */
+.login-form {
+  width: 32%;
+  background-color: #FFF;
+  border-radius: 3px;
+  margin: 85px auto;
+  border-radius: 5px;
+  padding: 5px;
+  > h2 {
+    background-color: $blue-light;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  form {
+    padding: 25px;
+    label {
+      display: block;
+      color: $blue-light;
+      font-family: 'Karla', sans-serif;
+    }
+    input:not([type='checkbox']) {
+      width: 100%;
+      margin: 5px auto;
+      margin-bottom: 15px;
+      &:focus {
+        border-color: $blue-light;
+      }
+    }
+    label.checkbox {
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    button {
+      font-family: 'Karla', sans-serif;
+      padding: 12px 18px;
+    }
+  }
+  .success-d {
+    .error-login,
+    .success-login {
+      padding: 15px;
+      margin: 8px;
+      font-family: 'Karla', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .error-login {
+      color: $red-dark;
+      background-color: transparentize($red-light, .5);
+    }
+    .success-login {
+      color: $green-dark;
+      background-color: transparentize($green-light, .5);
+    }
+  }
+}
+
+// ------------------------------------- \\
+
+/* Registertion Page */
+.register {
+
+  // Default
+  section {
+    padding: 15px 0 0;
+    width: 65%;
+    margin: auto;
+  }
+
+  // First Section
+  .choose {
+    background-color: $blue-light;
+    width: 35%;
+    text-align: center;
+    color: #FFF;
+    h1 {
+      font-size: 31px;
+      margin-bottom: 15px;
+      font-family: 'Karla', sans-serif;
+    }
+    a {
+      box-shadow: 0px 2px 4px #69676759;
+      display: block;
+      background-color: #fff;
+      padding: 18px;
+      border-radius: 0 0 3px 3px;
+      font-family: 'Karla', sans-serif;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $blue-dark;
+        color: #FFF;
+      }
+    }
+  }
+
+  // First Step to create account
+  #first-stage {
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      margin-top: 15px;
+    }
+    hr {
+      margin: 15px 0 25px;
+      border: .3px solid #e2dfdfd9;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      div {
+        width: 48%;
+        margin-bottom: 8px;
+        label {
+          display: block;
+          font-family: 'Karla', sans-serif;
+          margin: 5px;
+        }
+        input {
+          width: 99%;
+          font-family: 'Karla', sans-serif;
+          &:hover, &:focus { border-color: $blue-light; }
+        }
+        span {
+          display: block;
+          padding: 8px;
+          font-size: 12px;
+          font-family: 'Ubuntu', sans-serif;
+          color: grey
+        }
+      }
+      button {
+        padding: 8px 18px;
+      }
+    }
+    // Notifications
+    .error-login,
+    .success-login {
+      padding: 15px;
+      margin: 8px;
+      font-family: 'Karla', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+      position: relative;
+      i {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+      }
+    }
+    .error-login {
+      color: $red-dark;
+      background-color: rgba(239, 130, 119, 0.5);
+    }
+    .success-login {
+      color: $green-dark;
+      background-color: transparentize($green-light, .5);
+    }
+  }
+}
+
+// ------------------------------------- \\
+
+/* Footer */
+footer {
+  background-color: #FFF;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-family: 'Karla', sans-serif;
+  a {
+    font-family: 'Karla', sans-serif;
+  }
+}
